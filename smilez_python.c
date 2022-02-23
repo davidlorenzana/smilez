@@ -126,7 +126,7 @@ static PyMethodDef SmilezMethods[] = {
 
 static struct PyModuleDef smilez = {
     PyModuleDef_HEAD_INIT,
-    "smilez",     /* m_name */
+    "smilez",            /* m_name */
     "smilez doc.",       /* m_doc */
     -1,                  /* m_size */
     SmilezMethods,       /* m_methods */
