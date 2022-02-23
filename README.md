@@ -1,8 +1,8 @@
 ## SMILEZ - compression for SMILES strings
 
-This is a port of python3 for smilez library.
+This is a Python 3 port of smilez library.
 
-SMILEZ home page: https://bitbucket.org/dalke/smilez
+Original SMILEZ home page: https://bitbucket.org/dalke/smilez
 
 Smilez is a simple compression library for SMILES strings. It's
 closely based on the SMAZ compression library for short strings,
@@ -24,22 +24,20 @@ SMILES strings match that training set. In general it does best with
 "normal" SMILES, and poorly with uncommon features like reaction maps
 and isotopes.
 
-
- from   to 
- size  size  SMILES
- ----  ----  ------------------------------------------
-   1     1   C
-   2     1   CC
-   3     2   CCC
-   4     1   CCCC
-   7     4   F/C=C/F
-   6     8   [NH4+]
-   9     4   c1ccccc1O
-  26    13   Cn1cnc2c1c(=O)n(c(=O)n2C)C
-  28    10   CN1C=NC2=C1C(=O)N(C(=O)N2C)C
-  42    17   COc1ccc2nc([nH]c2c1)S(=O)Cc1ncc(C)c(OC)c1C
-  43    46   [CH2:1]=[CH:2][CH2:1][CH2:3][C:4](C)[CH2:3]
-  60    30   C[N+]1(C2CC(CC1C3C2O3)OC(=O)C(C4=CC=CS4)(C5=CC=CS5)O)C.[Br-]
+| from size | to size | SMILES | 
+| --------- | ------- | ------ |
+|         1 |     1   | C
+|         2 |    1    | CC
+|         3 |    2    | CCC
+|         4 |    1    | CCCC
+|         7 |    4    | F/C=C/F
+|         6 |    8    | [NH4+]
+|         9 |    4    | c1ccccc1O
+|        26 |   13    | Cn1cnc2c1c(=O)n(c(=O)n2C)C
+|        28 |   10    | CN1C=NC2=C1C(=O)N(C(=O)N2C)C
+|        42 |   17    | COc1ccc2nc([nH]c2c1)S(=O)Cc1ncc(C)c(OC)c1C
+|        43 |   46    | [CH2:1]=[CH:2][CH2:1][CH2:3][C:4](C)[CH2:3]
+|        60 |   30    | C[N+]1(C2CC(CC1C3C2O3)OC(=O)C(C4=CC=CS4)(C5=CC=CS5)O)C.[Br-]
 
 
 ## ChEMBL Example
@@ -47,10 +45,10 @@ and isotopes.
 I have a SMILES data set derived from ChEMBL 16 with 1,292,344
 records. 
 
-  uncompressed:  66,896,248 bytes
-    compressed:  25,455,759 bytes
+* uncompressed:  66,896,248 bytes
+* compressed:  25,455,759 bytes
 
-              => 60%  smaller
+=> 60%  smaller
 
 I timed the process using the Python API. It took about 2.6 seconds to
 compress the strings and 1.4 seconds to decompress them.
@@ -67,8 +65,8 @@ compressed SMILES are 58% smaller than the original SMILES (1.21 MB to
 
 ## C API
 
-   int smilez_compress(const char *in, int inlen, char *out, int outlen,
-                       int dictionary)
+   `int smilez_compress(const char *in, int inlen, char *out, int outlen,
+                       int dictionary)`
 
 Compress the SMILES string in 'in' of length 'inlen' and put the
 compressed data into 'out' of maximum length 'outlen' bytes. If the
