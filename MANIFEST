@@ -1,0 +1,12 @@
+COPYING
+MANIFEST
+Makefile
+README
+setup.py
+smilez.c
+smilez.h
+smilez_python.c
+smilez_test.c
+smilezcat.cpp
+smilezip.cpp
+test_smilez.py
