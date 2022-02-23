@@ -195,8 +195,8 @@ This runs a set of self-tests on the C API.
 
 ## CREDITS
 
-Smaz was written by Salvatore Sanfilippo and is released under the BSD
-license. Check the COPYING file for more information.
+Smaz was written by Salvatore Sanfilippo and is released under the BSD license. Check the COPYING file for more information.
 
-Smilez was written by Andrew Dalke and is released under the same BSD
-license.
+Smilez was written by Andrew Dalke and is released under the same BSD license.
+
+Port to Python 3 by David Lorenzana and is released under the same BSD license.
