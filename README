@@ -1,5 +1,6 @@
-SMILEZ - compression for SMILES strings
-=======================================
+## SMILEZ - compression for SMILES strings
+
+This is a port of python3 for smilez library.
 
 SMILEZ home page: https://bitbucket.org/dalke/smilez
 
@@ -15,8 +16,7 @@ but if you give it non-SMILES data the result might be 50% larger.
 You can use SMILEZ through the C API or the Python API.
 
 
-COMPRESSION EXAMPLES
-====================
+## COMPRESSION EXAMPLES
 
 The SMILEZ code dictionaries were trained on a mixture of PubChem and
 ChEMBL data. Compression performance will depend on how closely the
@@ -42,8 +42,7 @@ and isotopes.
   60    30   C[N+]1(C2CC(CC1C3C2O3)OC(=O)C(C4=CC=CS4)(C5=CC=CS5)O)C.[Br-]
 
 
-ChEMBL Example
-==============
+## ChEMBL Example
 
 I have a SMILES data set derived from ChEMBL 16 with 1,292,344
 records. 
@@ -66,8 +65,7 @@ I double-checked using the 24,323 SMILES from the NCI data set. The
 compressed SMILES are 58% smaller than the original SMILES (1.21 MB to
 0.51 MB).
 
-C API
-=====
+## C API
 
    int smilez_compress(const char *in, int inlen, char *out, int outlen,
                        int dictionary)
@@ -122,8 +120,7 @@ available through function calls:
     int smilez_get_compression_version(void);
 
 
-Python API
-==========
+## Python API
 
 Use "python setup.py install" to build and install the Python module
 "smilez".
@@ -159,13 +156,11 @@ and an example of compressing with the whitespace dictionary:
     >>> smilez.compress("P")
     ' '
 
-Command-line programs
-=====================
+## Command-line programs
 
 Running "make" will make three demonstration or test programs:
 
-smilezip
---------
+### smilezip
 
 Convert a SMILES file into a SMILEZ file.
 
@@ -184,8 +179,7 @@ size of the SMILEZ file. This is a demonstration of how one might use
 the whitespace dictionary.
 
 
-smilezcat
----------
+### smilezcat
 
 Convert a SMILEZ file into a SMILES file:
 
@@ -194,16 +188,14 @@ Convert a SMILEZ file into a SMILES file:
 
 
 
-smilez_test
------------
+### smilez_test
 
 This runs a set of self-tests on the C API.
 
 
 
 
-CREDITS
-=======
+## CREDITS
 
 Smaz was written by Salvatore Sanfilippo and is released under the BSD
 license. Check the COPYING file for more information.
