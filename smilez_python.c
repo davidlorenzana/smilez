@@ -142,7 +142,6 @@ PyInit_smilez(void) {
   PyObject *m;
 
   m = PyModule_Create(&smilez);
-//   m = PyModule_Create("smilez", SmilezMethods);
   if (m == NULL) {
     return;
   }
