@@ -28,7 +28,6 @@ compress_py(PyObject *self, PyObject *args) {
   PyObject *result;
 
   if (!PyArg_ParseTuple(args, "s#|i:compress", &smiles, &smiles_len, &dictionary)) {
-//   if (!PyArg_ParseTuple(args, "t#|i:compress", &smiles, &smiles_len, &dictionary)) {
     return NULL;
   }
 
