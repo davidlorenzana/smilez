@@ -90,9 +90,7 @@ decompress_py(PyObject *self, PyObject *args) {
     
   uncompressed_len = smilez_decompress(compressed_smiles, compressed_smiles_len,
                                        fast_buffer, FAST_BUFFER_SIZE);
-  
-  printf("decompressed.");
-  
+    
   if (uncompressed_len < FAST_BUFFER_SIZE) {
     return PyUnicode_FromStringAndSize(fast_buffer, uncompressed_len);
   }
