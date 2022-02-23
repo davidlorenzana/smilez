@@ -1,7 +1,9 @@
 SMILEZ - compression for SMILES strings
 =======================================
 
-SMILEZ home page: https://bitbucket.org/dalke/smilez
+This is a Python 3 port of smilez library.
+
+Original SMILEZ home page: https://bitbucket.org/dalke/smilez
 
 Smilez is a simple compression library for SMILES strings. It's
 closely based on the SMAZ compression library for short strings,
@@ -210,3 +212,6 @@ license. Check the COPYING file for more information.
 
 Smilez was written by Andrew Dalke and is released under the same BSD
 license.
+
+Port to Python 3 by David Lorenzana and is released under the same BSD license.
+
